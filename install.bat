@@ -7,7 +7,7 @@ set NODEJS_URL=https://nodejs.org/dist/%NODEJS_VERSION%/%NODEJS_FILENAME%
 ::set NODEJS_DOWNLOAD_LOCATION=.\
 
 
-::curl.bat %NODEJS_URL% %NODEJS_FILENAME%
+curl.bat %NODEJS_URL% %NODEJS_FILENAME%
 msiexec /qn /l* node-log.txt /i %NODEJS_FILENAME%
 
 ::, '%NODEJS_DOWNLOAD_LOCATION%%NODEJS_FILENAME%'
