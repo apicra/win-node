@@ -1,3 +1,3 @@
-node -V
-nodejs -V
+node -v
+nodejs -v
 which node
