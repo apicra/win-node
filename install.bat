@@ -36,5 +36,5 @@ more %NODEJS_LOG%
 ::msiexec /qn /l* C:\node-log.txt /i %NODEJS_DOWNLOAD_LOCATION%%NODEJS_FILENAME%
 
 endlocal
-echo DONE!
+echo program: %NODEJS_FILENAME% is installed!
 dir
