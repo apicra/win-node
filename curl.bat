@@ -5,4 +5,4 @@
 set input=%~1
 echo %input%
 powershell -Command "(new-object net.webclient).DownloadString('%input%')"
-pause
+::pause
