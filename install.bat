@@ -20,7 +20,7 @@ set INSTALLDIR=C:\nodejs\
 
 @echo on
 
-curl.bat %NODEJS_URL% %NODEJS_FILENAME% & msiexec.exe /i %NODEJS_FILENAME% INSTALLDIR=%INSTALLDIR% /qn /L*v %NODEJS_LOG%
+msiexec.exe /i %NODEJS_FILENAME% INSTALLDIR=%INSTALLDIR% /qn /L*v %NODEJS_LOG%
 ::msiexec.exe /i %NODEJS_FILENAME% INSTALLDIR="%INSTALLDIR%" /quiet
 ::msiexec /i %NODEJS_FILENAME% /qn
 ::msiexec /qn /l* %NODEJS_LOG% /i %NODEJS_FILENAME%
