@@ -8,14 +8,15 @@ set NODEJS_URL=https://nodejs.org/dist/%NODEJS_VERSION%/%NODEJS_FILENAME%
 set NODEJS_LOG=node-log.txt
 set TARGETDIR=C:\nodejs\
 
-::curl.bat %NODEJS_URL% %NODEJS_FILENAME%
+curl.bat %NODEJS_URL% %NODEJS_FILENAME%
+msiexec /i %NODEJS_FILENAME% /qn
 ::msiexec /qn /l* %NODEJS_LOG% /i %NODEJS_FILENAME%
-msiexec /i %NODEJS_FILENAME% TARGETDIR="%TARGETDIR%" ADDLOCAL="NodePerfCtrSupport,NodeEtwSupport,DocumentationShortcuts,EnvironmentPathNode,EnvironmentPathNpmModules,npm,NodeRuntime,EnvironmentPath" /qn /l* %NODEJS_LOG%
+::msiexec /i %NODEJS_FILENAME% TARGETDIR="%TARGETDIR%" ADDLOCAL="NodePerfCtrSupport,NodeEtwSupport,DocumentationShortcuts,EnvironmentPathNode,EnvironmentPathNpmModules,npm,NodeRuntime,EnvironmentPath" /qn /l* %NODEJS_LOG%
 ::
 ::  /i means normal install
 ::  /qn means no UI
 
-more %NODEJS_LOG%
+::more %NODEJS_LOG%
 
 ::, '%NODEJS_DOWNLOAD_LOCATION%%NODEJS_FILENAME%'
 ::%NODEJS_FILENAME%
