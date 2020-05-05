@@ -2,7 +2,9 @@
 ::echo You are about to use windows cURL, Enter your url after curl command below:
 ::set /p input="curl "
 ::cls
-set input=%~1
-echo %input%
-powershell -Command "(new-object net.webclient).DownloadString('%input%')"
-::pause
+set url=%~1
+set filename=%~2
+echo %url%
+powershell -Command "(new-object net.webclient).DownloadFile('%url%','%filename%')"
+::powershell -Command "(new-object net.webclient).DownloadString('%url%')"
+echo %filename%
