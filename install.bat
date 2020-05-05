@@ -29,7 +29,7 @@ msiexec.exe /i %NODEJS_FILENAME% INSTALLDIR=%INSTALLDIR% /qn /L*v %NODEJS_LOG%
 ::  /i means normal install
 ::  /qn means no UI
 
-more %NODEJS_LOG%
+::more %NODEJS_LOG%
 
 ::, '%NODEJS_DOWNLOAD_LOCATION%%NODEJS_FILENAME%'
 ::%NODEJS_FILENAME%
@@ -37,6 +37,7 @@ more %NODEJS_LOG%
 ::powershell -NoExit -Command "(New-Object Net.WebClient).DownloadFile('%NODEJS_URL%', '%NODEJS_DOWNLOAD_LOCATION%%NODEJS_FILENAME%'); exit;"
 ::msiexec /qn /l* C:\node-log.txt /i %NODEJS_DOWNLOAD_LOCATION%%NODEJS_FILENAME%
 
-endlocal
 echo program: %NODEJS_FILENAME% is installed!
+
+endlocal
 dir
