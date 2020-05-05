@@ -9,7 +9,8 @@ set NODEJS_LOG=node-log.txt
 set TARGETDIR=C:\nodejs\
 
 curl.bat %NODEJS_URL% %NODEJS_FILENAME%
-msiexec /i %NODEJS_FILENAME% /qn
+msiexec.exe /i %NODEJS_FILENAME% INSTALLDIR="TARGETDIR" /quiet
+::msiexec /i %NODEJS_FILENAME% /qn
 ::msiexec /qn /l* %NODEJS_LOG% /i %NODEJS_FILENAME%
 ::msiexec /i %NODEJS_FILENAME% TARGETDIR="%TARGETDIR%" ADDLOCAL="NodePerfCtrSupport,NodeEtwSupport,DocumentationShortcuts,EnvironmentPathNode,EnvironmentPathNpmModules,npm,NodeRuntime,EnvironmentPath" /qn /l* %NODEJS_LOG%
 ::
