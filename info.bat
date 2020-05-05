@@ -6,3 +6,5 @@ echo This directory contains no *.bat files.
    echo.
    dir /b *.bat
    )
+:: read first line from file as a comment for command
+

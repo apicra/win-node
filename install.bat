@@ -1,6 +1,7 @@
 @echo off
 :: silent install nodejs on windows console
 :: https://www.ibm.com/support/knowledgecenter/SSZUMP_7.2.1/install_grid_sym/install_silent.html
+echo I will install NODE, NPM on Windows system, if is existing i will stop this script
 
 NET SESSION >nul 2>&1
 IF %ERRORLEVEL% NEQ 0 (
