@@ -1,4 +1,11 @@
-::@echo off
+@echo off
+NET SESSION >nul 2>&1
+IF %ERRORLEVEL% NEQ 0 (
+	echo This setup needs admin permissions. Please run this file as admin.
+	pause
+	exit
+)
+
 setlocal
 
 set NODEJS_VERSION=v12.16.3
@@ -9,7 +16,8 @@ set NODEJS_LOG=node-log.txt
 set TARGETDIR=C:\nodejs\
 
 curl.bat %NODEJS_URL% %NODEJS_FILENAME%
-msiexec.exe /i %NODEJS_FILENAME% INSTALLDIR="%TARGETDIR%" /quiet
+msiexec.exe /i %NODEJS_FILENAME%  /qn /l* %NODEJS_LOG%
+::msiexec.exe /i %NODEJS_FILENAME% INSTALLDIR="%TARGETDIR%" /quiet
 ::msiexec /i %NODEJS_FILENAME% /qn
 ::msiexec /qn /l* %NODEJS_LOG% /i %NODEJS_FILENAME%
 ::msiexec /i %NODEJS_FILENAME% TARGETDIR="%TARGETDIR%" ADDLOCAL="NodePerfCtrSupport,NodeEtwSupport,DocumentationShortcuts,EnvironmentPathNode,EnvironmentPathNpmModules,npm,NodeRuntime,EnvironmentPath" /qn /l* %NODEJS_LOG%
@@ -26,5 +34,5 @@ msiexec.exe /i %NODEJS_FILENAME% INSTALLDIR="%TARGETDIR%" /quiet
 ::msiexec /qn /l* C:\node-log.txt /i %NODEJS_DOWNLOAD_LOCATION%%NODEJS_FILENAME%
 
 endlocal
-
+echo DONE!
 dir
