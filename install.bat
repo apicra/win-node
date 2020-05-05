@@ -5,10 +5,12 @@ set NODEJS_VERSION=v12.16.3
 set NODEJS_FILENAME=node-%NODEJS_VERSION%-x64.msi
 set NODEJS_URL=https://nodejs.org/dist/%NODEJS_VERSION%/%NODEJS_FILENAME%
 ::set NODEJS_DOWNLOAD_LOCATION=.\
-
+set NODEJS_LOG=node-log.txt
 
 curl.bat %NODEJS_URL% %NODEJS_FILENAME%
-msiexec /qn /l* node-log.txt /i %NODEJS_FILENAME%
+msiexec /qn /l* %NODEJS_LOG% /i %NODEJS_FILENAME%
+
+more %NODEJS_LOG%
 
 ::, '%NODEJS_DOWNLOAD_LOCATION%%NODEJS_FILENAME%'
 ::%NODEJS_FILENAME%
