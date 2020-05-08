@@ -4,17 +4,17 @@
 
 setlocal
 
-set NODEJS_VERSION=v12.16.3
-set NODEJS_FILENAME=node-%NODEJS_VERSION%-x64.msi
-set NODEJS_URL=https://nodejs.org/dist/%NODEJS_VERSION%/%NODEJS_FILENAME%
-::set NODEJS_DOWNLOAD_LOCATION=.\
-set NODEJS_LOG=node-log.txt
+set VERSION=v12.16.3
+set FILENAME=node-%VERSION%-x64.msi
+set URL=https://nodejs.org/dist/%VERSION%/%FILENAME%
+::set DOWNLOAD_LOCATION=.\
+set LOG=node-log.txt
 set INSTALLDIR=C:\nodejs\
 
 @echo on
 
-curl.bat %NODEJS_URL% %NODEJS_FILENAME%
-echo file %NODEJS_FILENAME% is downloaded!
+curl.bat %URL% %FILENAME%
+echo file %FILENAME% is downloaded!
 
 endlocal
 dir
