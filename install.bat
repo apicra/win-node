@@ -6,6 +6,7 @@ echo I will install NODE, NPM on Windows system, if is existing i will stop this
 WHERE node
 IF %ERRORLEVEL% EQU 0 (
     echo NODE JS is installed, the installation is stopped!
+    exit
 )
 
 NET SESSION >nul 2>&1

@@ -1,12 +1,22 @@
 # win-node
 Node JS for windows OS
 
-curl git
+## List of commands:
 
-curl git
-
+    curl.bat
+    doc.bat
+    download.bat
+    info.bat
+    install.bat
+    remove.bat
+    status.bat
+    stop.bat
+    test_after.bat
+    test_before.bat
+    update.bat
+    version.bat
 
 
 ## TODO
 + TEST SHELL SCRIPTS on gitlab
-+ check if nodejs is installed
+
