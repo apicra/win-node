@@ -1,7 +1,6 @@
-@ECHO OFF
+@echo off
 echo Check if the application works correctly
-node --version
-IF %ERRORLEVEL% EQU 0 (
-    echo "YES"
+WHERE node
+IF %ERRORLEVEL% NEQ 0 (
+    echo NODE JS is NOT installed!
 )
-::echo %ERRORLEVEL%
