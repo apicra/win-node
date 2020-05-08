@@ -1,4 +1,4 @@
-@echo off
+@ECHO OFF
 git --version
 IF %ERRORLEVEL% NEQ 0 (
 ::    echo "NOT"

@@ -1,4 +1,4 @@
-@echo off
+@ECHO OFF
 set BROWSER=chrome
 set BROWSER=firefox
 set URL=https://nodejs.org/

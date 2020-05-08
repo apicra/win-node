@@ -7,4 +7,4 @@ if NOT EXIST %FILENAME% (
     ::powershell -Command "(new-object net.webclient).DownloadString('%url%')"
     echo file: %FILENAME% is downloaded from URL: %url%
 ) else (
-echo The File %FILENAME% exist, and downloading is stopped  )
+echo The File %FILENAME% exist, and downloading is stopped!  )

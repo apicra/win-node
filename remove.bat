@@ -1,6 +1,5 @@
-@echo off
-:: silent install nodejs on windows console
-:: https://www.ibm.com/support/knowledgecenter/SSZUMP_7.2.1/install_grid_sym/install_silent.html
+@ECHO OFF
+echo I will remove the NODE application
 
 NET SESSION >nul 2>&1
 IF %ERRORLEVEL% NEQ 0 (
